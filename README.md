@@ -7,6 +7,7 @@ Dependencies
 ====
 
 [twisted](http://twistedmatrix.com/trac/)
+
 [pygame](http://www.pygame.org)
 
 Features
@@ -22,23 +23,29 @@ Usage
 ====
 
 To run the clock:
+
     python clock.py
 
 Screen can be updated using POST requests to the provided API
 
 Update onair information to be The Morning Show from Studio 2:
+
     curl -d "show=The Morning Show&onair=2" http://localhost:7000/info
 
 Trigger a progress bar for a now playing song (length in _seconds_):
+
     curl -d "artist=Icona Pop&title=I Love It&length=50" http://localhost:7000/play
 
 Trigger an announcement:
+
     curl -d "value=BULLETINS" http://localhost:7000/announcement
 
 Trigger an announcement with fancy colors:
+
     curl -d "value=BULLETINS&color=yellow&textcolor=black" http://localhost:7000/announcement
 
 Kill the current progress bar/announcement
+
     curl http://localhost:7000/stop
 
 
