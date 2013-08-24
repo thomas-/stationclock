@@ -3,12 +3,13 @@ stationclock
 
 A clock/information screen primarily for use in a radio station.
 
+Used in production at [University Radio Nottingham](http://urn1350.net).
+
 Dependencies
 ====
 
-[twisted](http://twistedmatrix.com/trac/)
-
-[pygame](http://www.pygame.org)
+- [twisted](http://twistedmatrix.com/trac/)
+- [pygame](http://www.pygame.org)
 
 Features
 ====
@@ -62,6 +63,13 @@ Thanks
 ===
 
 Special thanks to @tepreece and @ofluff for making this possible.
+
+Screenshots
+===
+
+![Screenshot1](http://i.imgur.com/ueZVtPM.png "When a song is playing")
+
+![Screenshot2](http://i.imgur.com/B6428fl.png "Bulletins ongoing")
 
 
 
