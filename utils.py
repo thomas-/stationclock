@@ -30,7 +30,7 @@ def make_readable_time():
 
 def make_backtimer_time():
     m, s = time.localtime()[4:6]
-    m = 59 - m
+    m = settings.BACKTIMER_COUNT - 1 - (m % settings.BACKTIMER_COUNT)
     s = 60 - s
     backtimer_string = '-%02d:%02d' % (m, s)
     return backtimer_string
