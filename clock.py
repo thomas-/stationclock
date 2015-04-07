@@ -108,6 +108,7 @@ def main():
     res = RESOLUTION
     screen = pygame.display.set_mode(res)
     pygame.init()
+    pygame.mouse.set_visible(False)
     StationClock(screen, res)
     # tick = LoopingCall(stationclock.tick())
     # tick.start(0.1)

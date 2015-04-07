@@ -6,6 +6,7 @@ from settings import ALLOWED_IPS
 
 class ProtectedSite(Site):
     def buildProtocol(self, addr):
+	print addr.host
         if addr.host in ALLOWED_IPS:
             return Site.buildProtocol(self, addr)
         else:
@@ -17,7 +18,7 @@ class SongResource(Resource):
         #super(SongResource, self).render_POST(request)
         artist = request.args['artist'][0]
         title = request.args['title'][0]
-        length = int(request.args['length'][0])
+        length = int(float(request.args['length'][0]))
         send_event(event='song', artist=artist, title=title, length=length)
         return 'OK'
 
